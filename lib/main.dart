@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qiita_handson/screens/search_screen.dart';
 
 void main() {
   runApp(const MainApp());
