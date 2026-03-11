@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:qiita_handson/models/article.dart';
+import 'package:qiita_handson/models/user.dart';
+import 'package:qiita_handson/widgets/article_container.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -40,6 +42,19 @@ class _SearchScreenState extends State<SearchScreen> {
                 final results = await searchQiita(value);
                 setState(() => articles = results);
               },
+            ),
+          ),
+          // const ArticleContainer(),
+          ArticleContainer(
+            article: Article(
+              title: 'test',
+              user: User(
+                id: 'test',
+                profileImageUrl: 'https://firebasestorage.googleapis.com/v0/b/gs-expansion-test.appspot.com/o/unknown_person.png?alt=media',
+              ),
+              createdAt: DateTime.now(),
+              tags: ['dart', 'flutter'],
+              url: 'https://example.com',
             ),
           ),
         ],
