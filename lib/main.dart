@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
           backgroundColor: Color(0xFF55C500),
         ),
         textTheme: Theme.of(context).textTheme.apply(
-          bodyColor: const Colors.white,
+          bodyColor: Colors.white,
         ),
       ),
       home: const SearchScreen(), // SearchScreenを設定
